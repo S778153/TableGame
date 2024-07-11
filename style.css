@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+スマホ*/
+
+@media only screen and (max-width: 768px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 20px;
+        background-color: #7b8d42;
+        color: white;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .menu-icon {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-icon .bar {
+        width: 30px;
+        height: 2.5px;
+        background-color: white;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+
+    nav {
+        position: fixed;
+        top: 55px;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #7b8d42;
+        overflow-x: hidden;
+        transition: left 0.3s ease;
+        text-align: left;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 5% 0 0 10%;
+        margin: 0 0 20% 0;
+    }
+
+    nav ul li {
+        padding: 15px;
+        border-bottom: 0.8px solid #f4f4f4;
+        width: 85%;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    .lang {
+        margin-top: 30%;
+        padding: 18px 18px 18px 18px;
+        border-top: 0.8px solid #f4f4f4;
+        border-bottom: 0.8px solid #f4f4f4;
+        width: 42%;
+    }
+
+    .langContainer {
+        display: flex;
+    }
+
+    .lang a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    nav ul p {
+        color: #b3b3b3;
+        padding: 5% 0 0 28%;
+        font-size: 60%;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .menu-icon.open .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-8.5px, 6px);
+    }
+
+    .menu-icon.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.open .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-8.5px, -6px);
+    }
+
+    .header-icon-center {
+        width: 37px;
+        height: 37px;
+        margin: auto;
+        z-index: 1001;
+    }
+
+    .header-icon-right {
+        width: 30px;
+        height: 30px;
+        margin-left: auto;
+        z-index: 1001;
+    }
+
+    .main {
+        padding-top: 60px;
+    }
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+PC*/
+
+@media print,
+screen and (min-width: 769px) {}
