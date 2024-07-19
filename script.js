@@ -15,9 +15,3 @@ function clickEvent() {
 function flipCard(card) {
     card.classList.toggle('flipped');
 }
-
-document.querySelectorAll('.flip-card').forEach(card => {
-    card.addEventListener('touchstart', function() {
-        flipCard(this);
-    });
-});
