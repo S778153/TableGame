@@ -794,6 +794,11 @@ screen and (min-width: 769px) {
         margin: auto;
     }
 
+    .Detailsue {
+        width: 100%;
+        margin: 40px auto 0 auto;
+    }
+
     .Detailstitle {
         margin: 0 auto;
         text-align: left;
