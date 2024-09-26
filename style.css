@@ -538,6 +538,12 @@ body {
         perspective: 1000px;
         cursor: pointer;
     }
+
+    .flip-card span {
+        padding: 4px;
+        border: 1px solid #f4f4f4;
+        border-radius: 50%;
+    }
     
     .flip-card-inner {
         position: relative;
@@ -1029,6 +1035,12 @@ screen and (min-width: 961px) {
         height: 424.5px;
         perspective: 1000px;
         cursor: pointer;
+    }
+
+    .flip-card span {
+        padding: 5px;
+        border: 1px solid #f4f4f4;
+        border-radius: 50%;
     }
     
     .flip-card-inner {
